@@ -11,7 +11,7 @@ int compareInt(const void *a, const void *b) {
 }
 
 int main() {
-    int n, sumA = 0, sumB = 0, res;
+    int n, res = 0;
     scanf("%d", &n);
     int array[n];
 
@@ -23,12 +23,11 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         if (i % 2 == 0) {
-            sumA += array[i];
+            res += array[i];
         } else {
-            sumB += array[i];
+            res -= array[i];
         }
     }
 
-    res = sumA - sumB;
     printf("%d\n", res);
 }
